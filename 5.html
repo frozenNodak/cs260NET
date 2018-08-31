@@ -3,15 +3,16 @@
 	<head>
 	<style>
 			table,td {
-			border: 2px solid black;
+			border: 3px solid black;
+			border-collapse: collapse;
 			}
 	</style>
 	<title>David's Bookstore</title>
 	</head>
 	<header style="background-color:gray;" width="100%" >
-		<h1 align="center">Welcome to David's Bookstore</h1>
+		<h1 align="center">Bookstore Cart</h1>
 	</header>
-	<body background="9.jpg">
+	<body background="9.jpg" >
 		<table align="left" width="100%">
 			<tr>
 				<th>
@@ -41,14 +42,70 @@
 				</th>
 			</tr>
 		</table>
-		<h2><br/><br/><br/><br/><u>More Bookstore Links</u></h2>
-		<a href="https://www.bkstr.com/northdakotastore/home"> <abbr title="University of North Dakota">UND</abbr> Bookstore</a>
-		<br/>
-		<a href="https://fergusonbooks.com/">Ferguson Books</a>
+		
+		<h1 align="center">Order Review</h1>
+		<table align="center" style="background-color:white;">
+			<tr>
+				<th width="220">
+					<h4><u>Title</u></h4>
+				</th>
+				<th width="200">
+					<h4><u>Price</u></h4>
+				</th>
+				<th>
+					<h4><u>Qty</u><h4>
+				</th>
+				<th width="75">
+					<h4><u>Total</u></h4>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<p>A Beginner's Guide to DOTA 2</p>
+				</td>
+				<td>
+					<p><code>%5.00<code></p>
+				</td>
+				<td>
+					<p><code>2</code></p>
+				</td>
+				<td>
+					<p><code><b>$10.00</b></code></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>DOTA 2: The Comic Collection</p>
+				</td>
+				<td>
+					<p><code>%15.00<code></p>
+				</td>
+				<td>
+					<p><code>1</code></p>
+				</td>
+				<td>
+					<p><code><b>$15.00</b></code></p>
+				</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>
+					<p><code>$25.00</code></p>
+				</th>
+			</tr>
+			
+		</table>
+		<form action="6.html">
+			<input type="submit" value="Submit Order">
+		</form>
+		
+		
 	</body>
 	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
 	 David Erickson &copy 2018
 	</footer>
 </html>
 
-<!-- NOTES: use iframes -->
+<!-- cart icon 9.jpg/png -->
