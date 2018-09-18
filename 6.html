@@ -5,6 +5,10 @@
 			table {
 			border: 2px solid black;
 			}
+			fieldset{
+			  width: 400px;
+			  margin:auto;
+			}
 	</style>
 	<title>David's Bookstore</title>
 	</head>
@@ -42,77 +46,81 @@
 			</tr>
 		</table>
 		<h3 align="center">Submit Payment</h3>
-		
-		<table style="border:none;" align="center">
-			<tr>
-				<td>
-					Name: 
-				</td>
-				<td>
-					<input type="text" > <br/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					CC Number: 
-				</td>
-				<td>
-					<input type="password"><br/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					CC exp: 
-				</td>
-				<td>
-					<input type="text"><br/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					CC pin: 
-				</td>
-				<td>
-					<input type="text"><br/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Street Address: 
-				</td>
-				<td>
-					<input type="text"><br/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					City: 
-				</td>
-				<td>
-					<input type="text"><br/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					State: 
-				</td>
-				<td>
-					<input type="text"><br/>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Zip Code: 
-				</td>
-				<td>
-					<input type="text">
-				</td>
-			</tr>
-		</table>
-		<form action="7.html" align="center">
-			<br/><input type="submit" value="Complete Order">
-		</form>
-		
+		<fieldset style="display:inline-block; width:300px;" align="center">
+			<form style="border:none;" align="center" width="350px">
+				<legend align="center">Delivery Information</legend>
+				<table style="border:none;" align="center">
+					<tr>
+						<td>
+							Name: 
+						</td>
+						<td>
+							<input type="text" > <br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							CC Number: 
+						</td>
+						<td>
+							<input type="password"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							CC exp: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							CC pin: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Street Address: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							City: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							State: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Zip Code: 
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+				</table>
+			</form>
+			<hr color="black" width="300px"/>
+			<form action="7.html" style="text-align:center;" >
+				<input type="submit" value="Complete Order" style="background-color: #2ecc71; font-size:20px; border-radius:12px; border: 2px dash white; box-shadow: 8px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19); ">
+			</form>
+		</fieldset>
 	</body>
 	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
 	 David Erickson &copy 2018

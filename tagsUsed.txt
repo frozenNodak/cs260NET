@@ -32,3 +32,16 @@ h6
 del
 ins
 label
+big
+em
+i
+iframe
+caption
+strong
+colgroup
+col
+ul
+li
+legend
+fieldset
+cite

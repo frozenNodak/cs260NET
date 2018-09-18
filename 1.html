@@ -4,14 +4,36 @@
 	<head>
 		<style>
 			table, th, td {
-			border: 1px solid black;
-			}
+							border: 1px solid black;
+							}
+			.button {
+					  display: inline-block;
+					  padding: 10px 15px;
+					  font-size: 24px;
+					  font-family: Georgia;
+					  cursor: pointer;
+					  text-align: center;
+					  text-decoration: none;
+					  outline: none;
+					  color: black;
+					  background-color: #e3e500;
+					  border: none;
+					  border-radius: 15px;
+					  box-shadow: 0 9px #999;
+					}
+			.button:hover {background-color: #bfc100}
+
+			.button:active {
+						  background-color: #bfc100;
+						  box-shadow: 0 5px #666;
+						  transform: translateY(4px);
+						  }
 		</style>
 	<title>David's Bookstore</title>
 	</head>
 	
 	<body background="9.jpg">
-		<table style="width:50%" align="center">
+		<table style="width:50%;" align="center" >
 			<tr style="background-color:gray; width:100%;">
 				<th>
 					<h2>Log into Bookstore</h2>
@@ -21,13 +43,13 @@
 				<th>
 					<br/>
 					 <form action ="2.html">
-						Username:
+						<i>Username:</i>
 						<input type="text" name="username">
 						<br/><br/>
-						Password: 
+						<i>Password: </i>
 						<input type="text" name="password">
 						<br/><br/>
-						<input type="submit" value="Log In">
+						<input class="button" type="submit" value="Log In">
 						<br/><br/>
 						<!-- Username and Password are arbitrary.  -->
 					 </form>
@@ -35,7 +57,7 @@
 			</tr>
 		</table>
 	</body>
-	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	<footer  style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
 	 David Erickson &copy 2018
 	</footer>
 </html>
