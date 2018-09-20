@@ -45,7 +45,10 @@
 		<!-- search box -->
 		<form action="" style="text-align:center;">
 			<label for="search"><br/>Search Text:</label>
-			<input type="text" name ="searchBox">
+			<input type="text" name ="searchBox" list="searchStuff" maxlength="20">
+			<datalist id="searchStuff">
+			  <option value="Annabelle">
+			</datalist>
 			<input type="submit" value="Search" style="background-color: #2ecc71; font-size:16px; border-radius:12px; border: 2px dash white; box-shadow: 8px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19); "><br/><br/>
 		</form>
 		
@@ -101,7 +104,7 @@
 					</select>
 				</td>
 				<td>
-					<input type="checkbox" name="order" value="yes">Order</input>
+					<input type="checkbox" name="order" value="yes" checked>Order</input>
 				</td>
 			</tr>
 			<tr><!-- Book 2 -->

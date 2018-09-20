@@ -41,8 +41,33 @@
 				</th>
 			</tr>
 		</table>
-		Download Progress:<progress value="33" max="100"></progress>
+		<center>Download Progress: <progress value="33" max="100"></progress></br></br></center>
+		
+		<audio id="audio_play">
+			<source src="http://soundbible.com/grab.php?id=1964&type=mp3" type="audio/ogg" />
+		</audio>
+		<img src="10.gif" alt="Thank You" height="200" width="275" onCLick="document.getElementById('audio_play').play(); return false;">
+		</br>
+		</br>
+		-Supported by this red square:</br>
+		<canvas id="myCanvas"></canvas>
+
+		<script>
+			var canvas = document.getElementById("myCanvas");
+			var ctx = canvas.getContext("2d");
+			ctx.fillStyle = "#FF0000";
+			ctx.fillRect(0, 0, 80, 80);
+		</script>
+		
+		<input list="PeopleWhoHelped">
+
+		<datalist id="PeopleWhoHelped">
+		  <option value="Annabelle">
+		  <option value="Stella">
+		  <option value="Brandy">
+		</datalist>
 	</body>
+
 	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
 	 David Erickson &copy 2018
 	</footer>
