@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta name="description" content="Basic Bookstore made with HTML">
+	<head>
+		<style>
+			table, th, td {
+							border: 1px solid black;
+							}
+			.button {
+					  display: inline-block;
+					  padding: 10px 15px;
+					  font-size: 24px;
+					  font-family: Georgia;
+					  cursor: pointer;
+					  text-align: center;
+					  text-decoration: none;
+					  outline: none;
+					  color: black;
+					  background-color: #e3e500;
+					  border: none;
+					  border-radius: 15px;
+					  box-shadow: 0 9px #999;
+					}
+			.button:hover {background-color: #bfc100}
+
+			.button:active {
+						  background-color: #bfc100;
+						  box-shadow: 0 5px #666;
+						  transform: translateY(4px);
+						  }
+		</style>
+	<title>David's Bookstore</title>
+		<base href="http://wenchen.cs.und.edu/course/260/" target="_blank">
+	</head>
+	
+	<body background="9.jpg">
+		<table style="width:50%;" align="center" >
+			<tr style="background-color:gray; width:100%;">
+				<th>
+					<h2>Log into Bookstore</h2>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<br/>
+					 <form action ="2.html">
+						<i>Username:</i>
+						<input type="text" name="username">
+						<br/><br/>
+						<i>Password: </i>
+						<input type="text" name="password">
+						<br/><br/>
+						<input class="button" type="submit" value="Log In">
+						<br/><br/>
+						<!-- Username and Password are arbitrary.  -->
+					 </form>
+				</th>
+			</tr>
+		</table>
+	</body>
+	<footer  style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
