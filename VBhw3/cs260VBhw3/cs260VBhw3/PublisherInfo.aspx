@@ -1,15 +1,12 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="AddPublisher.aspx.vb" Inherits="AddPublisher" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="PublisherInfo.aspx.vb" Inherits="PublisherInfo" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Add Publisher</title>
+    <title>Add Royalties</title>
     <style type="text/css">
-        .auto-style1 {
-            width: 73px;
-        }
-
+        
         ul {
             list-style-type: none;
             margin: 0;
@@ -43,23 +40,27 @@
         <li><a href="Home.aspx">Home</a></li>
         <li><a href="AddRoyalties.aspx">All Royalties</a></li>
         <li><a href="AddAuthor.aspx">Add Authors</a></li>
-        <li><a  class="active" href="AddPublisher.aspx">Add Publishers</a></li>
+        <li><a href="AddPublisher.aspx">Add Publishers</a></li>
         <li><a href="LinkAuthPub.aspx">Link Authors & Publishers</a></li>
     </ul>
-    <form id="form1" runat="server" style="text-align:center;" font-size="X-Large">
+    <form id="form1" runat="server" style="text-align: center; font-size:x-large">
         <h1>
-            <u>Enter a new Publisher</u><br />
+            <u>Publishers Information</u><br />
         </h1>
-        Name: <asp:TextBox ID="tb_Name" runat="server" Width="168px"></asp:TextBox>
-        <br />
-        City:&nbsp;&nbsp;&nbsp; <asp:TextBox ID="tb_City" runat="server" Width="167px"></asp:TextBox>
-        
-        <p>
-            <asp:Button ID="Button1" runat="server" style="margin-left: 0px" Text="Submit" />
-        </p>
+        Name:<asp:Label ID="Name" runat="server" Text=""></asp:Label>&nbsp;
+        ID:<asp:Label ID="ID" runat="server" Text=""></asp:Label>&nbsp; City:<asp:Label ID="City" runat="server" Text=""></asp:Label>&nbsp;
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="X-Large">
+            <asp:TableRow>
+                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;AUTHOR&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
+                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;ID&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
+                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;ROYALTY&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
+            </asp:TableRow>
+        </asp:Table>
+
         <p>
             <asp:Label ID="greet" runat="server" Text=""></asp:Label>
         </p>
     </form>
 </body>
 </html>
+

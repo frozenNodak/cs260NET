@@ -1,10 +1,10 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="AddRoyalties.aspx.vb" Inherits="AddRoyalties" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="AuthorInfo.aspx.vb" Inherits="AuthorInfo" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>All Royalties</title>
+    <title>Add Royalties</title>
     <style type="text/css">
         .auto-style1 {
             width: 73px;
@@ -41,22 +41,24 @@
     </h1>
     <ul>
         <li><a href="Home.aspx">Home</a></li>
-        <li><a class="active" href="AddRoyalties.aspx">All Royalties</a></li>
+        <li><a href="AddRoyalties.aspx">All Royalties</a></li>
         <li><a href="AddAuthor.aspx">Add Authors</a></li>
         <li><a href="AddPublisher.aspx">Add Publishers</a></li>
         <li><a href="LinkAuthPub.aspx">Link Authors & Publishers</a></li>
     </ul>
-    <form id="form1" runat="server" style="text-align: center" >
+    <form id="form1" runat="server" style="text-align: center; font-size:x-large">
         <h1>
-            <u>All Royalites</u><br />
+            <u>Authors Information</u><br />
         </h1>
+        Name:<asp:Label ID="Name" runat="server" Text="" Font-Size="X-Large"></asp:Label>&nbsp;
+        ID:<asp:Label ID="ID" runat="server" Text="" Font-Size="X-Large"></asp:Label>&nbsp;
+        Sex:<asp:Label ID="sex" runat="server" Text="" Font-Size="X-Large"></asp:Label>&nbsp;
         <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" Font-Size="X-Large">
             <asp:TableRow>
-                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;AUTHOR (id)&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
-                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;PUBLISHER (id)&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
-                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;ROYALTY (%)&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
+                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;PUBLISHER&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
+                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;PUBLISHER ID&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
+                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;ROYALTY&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
                 <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;UPDATE&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
-                <asp:TableHeaderCell>&nbsp;&nbsp;&nbsp;&nbsp;DELETE&nbsp;&nbsp;&nbsp;&nbsp;</asp:TableHeaderCell>
             </asp:TableRow>
         </asp:Table>
 

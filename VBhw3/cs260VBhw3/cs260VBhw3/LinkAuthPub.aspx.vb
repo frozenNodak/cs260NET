@@ -17,7 +17,9 @@ Partial Class LinkAuthPub
             MsgBox("Please select an Author.", 0, "INPUT ERROR")
             Return
         End If
-        If CheckForAlphaCharacters(tb_Royalties.Text) Then
+        If String.IsNullOrEmpty(tb_Royalties.Text) Then
+            tb_Royalties.Text = 0
+        ElseIf CheckForAlphaCharacters(tb_Royalties.Text) Then
             MsgBox("Please enter only numeric values", 0, "INPUT ERROR")
             Return
         End If
@@ -35,7 +37,7 @@ Partial Class LinkAuthPub
         conn.Close()
 
 
-        greet.Text = "Linking: " + ddl_Authors.SelectedItem.Text + ", " + ddl_Publishers.SelectedItem.Text + ", " + tb_Royalties.Text
+        greet.Text = "Linking: " + ddl_Authors.SelectedItem.Text + ", " + ddl_Publishers.SelectedItem.Text + ", " + tb_Royalties.Text & "%"
     End Sub
 
     'Checks for aplha chars
@@ -48,4 +50,9 @@ Partial Class LinkAuthPub
 
         Return True 'Return true if all elements are characters
     End Function
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'add the connection string programatically
+
+
+    End Sub
 End Class

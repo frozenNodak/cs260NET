@@ -1,52 +1,104 @@
-﻿Imports System.Data
+﻿Imports System
+Imports System.Collections.Generic
+Imports System.Data
 Imports System.Data.OleDb
+Imports System.Web.UI.WebControls
+
 Partial Class AddRoyalties
     Inherits System.Web.UI.Page
     Dim control As New Controller
     Dim conn As OleDbConnection
+    Dim royList As New List(Of Tuple(Of String, String, String))
+    Dim cb_toUpdate As List(Of CheckBox)
+    Dim cb_toDelete As List(Of CheckBox)
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-        'ON load, get a list of the AID, PID, and Royalties[textbox] and go through them and add a row in the table for each one
+        'ON load, get a list of the Authors, Name, and Royalties[textbox] and go through them and add a row in the table for each one
         'along with a update and delete checkbox. 
         Dim royList As New List(Of Tuple(Of String, String, String))()
-        conn = Control.GetConnection()
-        Dim sql As String = "SELECT * FROM Royalties"
+        conn = control.GetConnection()
+        Dim sql As String = "SELECT Authors.Name AS Authors_Name, Authors.AID, Publishers.Name As Publishers_Name, Publishers.PID, Royalties.Royalty " &
+                    "From Publishers INNER Join (Authors INNER Join Royalties On Authors.[AID] = Royalties.[AID]) ON Publishers.[PID] = Royalties.[PID];"
+
         Dim cmd As New OleDb.OleDbCommand(sql, conn)
         conn.Open()
         Dim dbRoyal = cmd.ExecuteReader()
         'cmd = Nothing
 
 
-
         Dim cellCtr As Integer
         Dim cellCnt As Integer
+        Dim tRowNum As Integer
         cellCnt = 5
         If dbRoyal.HasRows Then
             While dbRoyal.Read()
-                'royList.Add(New Tuple(Of String, String, String)(dbRoyal.GetString(0), dbRoyal.GetString(0), dbRoyal.GetString(0)))
                 Dim tRow As New TableRow()
+                Dim newtuple As Tuple(Of String, String, String) = New Tuple(Of String, String, String)(dbRoyal.Item(0).ToString(), dbRoyal.Item(1).ToString(), dbRoyal.Item(2).ToString())
+                royList.Add(newtuple)
                 For cellCtr = 1 To cellCnt
+
                     Dim tCell As New TableCell()
                     If cellCtr = 1 Then
-                        tCell.Text = dbRoyal.Item(0).ToString()
+                        Dim hypLink As New HyperLink
+                        hypLink.Text = dbRoyal.Item(0).ToString() & " (" & dbRoyal.Item(1).ToString & ")"
+                        hypLink.NavigateUrl = "AuthorInfo.aspx?&id=" & dbRoyal.Item(1).ToString
+                        tCell.Controls.Add(hypLink)
                     ElseIf cellCtr = 2 Then
-                        tCell.Text = dbRoyal.Item(1).ToString()
+                        Dim hyplink As New HyperLink
+                        hyplink.Text = dbRoyal.Item(2).ToString() & " (" & dbRoyal.Item(3).ToString & ")"
+                        hyplink.NavigateUrl = "PublisherInfo.aspx?&id=" & dbRoyal.Item(3).ToString
+                        tCell.Controls.Add(hyplink)
                     ElseIf cellCtr = 3 Then
-                        tCell.Text = dbRoyal.Item(2).ToString()
+                        Dim tb As New TextBox With {
+                            .ID = "tb_" & Convert.ToString(tRowNum) & "_" & Convert.ToString(cellCtr),
+                            .Text = dbRoyal.Item(4).ToString()
+                        }
+                        tCell.Controls.Add(tb)
                     ElseIf cellCtr = 4 Then
                         'add a checkbox for update
+                        Dim chk As New CheckBox With {
+                            .ID = "chb_" & Convert.ToString(tRowNum) & "_" & Convert.ToString(cellCtr),
+                            .Text = Convert.ToString("Update")
+                        }
+                        'cb_toUpdate.Add(chk)
+                        tCell.Controls.Add(chk)
+
                     ElseIf cellCtr = 5 Then
                         'add a checkbox for delete
+                        Dim chk As New CheckBox With {
+                            .ID = "chb_" & Convert.ToString(tRowNum) & "_" & Convert.ToString(cellCtr),
+                            .Text = Convert.ToString("Delete")
+                        }
+                        'cb_toDelete.Add(chk)
+                        tCell.Controls.Add(chk)
                     End If
 
                     tRow.Cells.Add(tCell)
 
                 Next
-                .Rows.Add(tRow)
+                tRowNum = tRowNum + 1
+                Table1.Rows.Add(tRow)
             End While
         End If
 
         cmd.Dispose()
         conn.Close()
+    End Sub
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        For Each checkUpd As CheckBox In cb_toUpdate
+            If checkUpd.Checked Then
+                Dim test As Boolean
+                test = True
+                'grab the corresponding Author, publisher and new royalty and update db
+            End If
+        Next
+        For Each checkDel As CheckBox In cb_toDelete
+            If checkDel.Checked Then
+                Dim test2 As Boolean
+                test2 = True
+                'grab the corresponding Author and publisher and delete from db
+            End If
+        Next
+        Response.Redirect(HttpContext.Current.Request.Url.ToString(), True)
     End Sub
 End Class
