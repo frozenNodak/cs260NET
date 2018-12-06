@@ -41,7 +41,7 @@ Partial Class NewCustomer
             message.Text = ex.Message
             Return
         End Try
-
+        control.Setcurrent(tb_Username.Text)
         message.Text = "Created Customer: " + tb_Username.Text + "."
         tb_Username.Text = ""
         tb_password.Text = ""
