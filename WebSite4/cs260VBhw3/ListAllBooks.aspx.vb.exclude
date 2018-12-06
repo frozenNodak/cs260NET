@@ -1,0 +1,66 @@
+﻿Imports System
+Imports System.Collections.Generic
+Imports System.Data
+Imports System.Data.OleDb
+Imports System.Data.SqlClient
+Imports System.Web.UI.WebControls
+
+Partial Class ListAllBooks
+    Inherits System.Web.UI.Page
+    Dim control As New Controller
+    Dim conn As OleDbConnection
+    Dim royList As New List(Of Tuple(Of String, String, String))
+    Dim cb_toUpdate As List(Of CheckBox)
+    Dim cb_toDelete As List(Of CheckBox)
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        conn = control.GetConnection()
+        Dim sql As String = "SELECT Authors.Name, Books.Title, Books.ISBN, Books.Price" &
+        " FROM (Authors INNER JOIN [Writtenby] ON Authors.[AID] = [Writtenby].[AID]) INNER JOIN Books ON [Writtenby].[ISBN] = Books.[ISBN];"
+
+        Dim cmd As New OleDb.OleDbCommand(sql, conn)
+        conn.Open()
+        Dim dbBook = cmd.ExecuteReader()
+
+
+        Dim cellCtr As Integer
+        Dim cellCnt As Integer
+        Dim tRowNum As Integer
+        cellCnt = 5
+        If dbBook.HasRows Then
+            While dbBook.Read()
+                Dim tRow As New TableRow()
+                For cellCtr = 1 To cellCnt
+
+                    Dim tCell As New TableCell()
+                    If cellCtr = 1 Then
+                        Dim hypLink As New HyperLink
+                        hypLink.Text = dbBook.Item(0).ToString()
+                        hypLink.NavigateUrl = "AuthorInfo.aspx?&id=" & dbBook.Item(0).ToString
+                        tCell.Controls.Add(hypLink)
+                    ElseIf cellCtr = 2 Then
+                        tCell.Text = dbBook.Item(1).ToString
+                    ElseIf cellCtr = 3 Then
+                        Dim hyplink As New HyperLink
+                        hyplink.Text = dbBook.Item(2).ToString()
+                        hyplink.NavigateUrl = "BookInfo.aspx?&id=" & dbBook.Item(2).ToString 'ISBN
+                        tCell.Controls.Add(hyplink)
+                    ElseIf cellCtr = 4 Then
+                        tCell.Text = dbBook.Item(3).ToString
+
+                    End If
+
+                    tRow.Cells.Add(tCell)
+
+                Next
+                tRowNum = tRowNum + 1
+                Table1.Rows.Add(tRow)
+            End While
+        End If
+
+        cmd.Dispose()
+        conn.Close()
+    End Sub
+
+End Class

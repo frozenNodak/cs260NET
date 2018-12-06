@@ -1,0 +1,30 @@
+Things for the System Admin:
+- Enter Authors in one by one
+- after entering authors, enter books one by one
+- List all hyperlinked book titles, author names, and customer names. 
+- resetting the system data
+
+For customers:
+- sign up, in, and out. 
+- purchase the selected book after searching books. if the book has been purchased before, 
+	add the quantities but do not repeat the order. 
+
+	
+generic for both:
+- List the books
+	- search titles: case sensitive title includes keywords seperated by spaces. 
+		- list all books if search box is empty
+	- Search Authors: case senstive Authors' name inlcude the name
+	- Search prices: if prices fall in a range shown in radio buttons every $10
+	results will show a list of books, each including a checkbox for purchasing, hyperlinked title, and quantity input
+	
+- book hyperlink
+	- show the ISBN, Title, Hyperlinked Authors name, and a price
+
+- Authors Hyperlink 
+	- show ID, Name, and Hyperlinked titles of books written
+	
+- Customers Account
+	- list the ID, Name, Hyperlink title of books purchased w/ corresponding quantities and total amount of books purchased. 
+	- Customer can only check his/her own account
+	
