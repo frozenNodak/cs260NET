@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta name="description" content="Basic Bookstore made with HTML">
+	<head>
+		<style>
+			table, th, td {
+							border: 1px solid black;
+							}
+			.button {
+					  display: inline-block;
+					  padding: 10px 15px;
+					  font-size: 24px;
+					  font-family: Georgia;
+					  cursor: pointer;
+					  text-align: center;
+					  text-decoration: none;
+					  outline: none;
+					  color: black;
+					  background-color: #e3e500;
+					  border: none;
+					  border-radius: 15px;
+					  box-shadow: 0 9px #999;
+					}
+			.button:hover {background-color: #bfc100}
+
+			.button:active {
+						  background-color: #bfc100;
+						  box-shadow: 0 5px #666;
+						  transform: translateY(4px);
+						  }
+		</style>
+	<title>David's Bookstore</title>
+		<base href="http://wenchen.cs.und.edu/course/260/" target="_blank">
+	</head>
+	
+	<body background="9.jpg">
+		<table style="width:50%;" align="center" >
+			<tr style="background-color:gray; width:100%;">
+				<th>
+					<h2>Log into Bookstore</h2>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<br/>
+					 <form action ="2.html">
+						<i>Username:</i>
+						<input type="text" name="username">
+						<br/><br/>
+						<i>Password: </i>
+						<input type="text" name="password">
+						<br/><br/>
+						<input class="button" type="submit" value="Log In">
+						<br/><br/>
+						<!-- Username and Password are arbitrary.  -->
+					 </form>
+				</th>
+			</tr>
+		</table>
+	</body>
+	<footer  style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+			table,td {
+			border: 2px solid black;
+			}
+	</style>
+	<title>David's Bookstore</title>
+	</head>
+	<header style="background-color:gray;" width="100%" >
+		<h1 align="center">Welcome to David's Bookstore</h1>
+	</header>
+	<body background="9.jpg">
+		<table align="left" width="100%">
+			<tr>
+				<th>
+					<h3>Search</h3>
+					<form action ="3.html">
+						<input type="image" src="1.png" name ="searchBtn" id="searchbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Help</h3>
+					<form action ="4.html">
+						<input type="image" src="2.png" name ="helpBtn" id="helpbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Home</h3>
+					 <form action ="2.html">
+						<input type="image" src="3.png" name ="homeBtn" id="homebutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Logout</h3>
+					 <form action ="1.html">
+						<input type="image" src="4.png" name ="logoutbtn" id="logoutbutton" style="width:50px;height:50px;" 
+						action="1.html"/>
+					 </form>
+				</th>
+			</tr>
+		</table>
+		<h2><br/><br/><br/><br/><u>More Bookstore Links</u></h2>
+		<ul>
+			<li><a href="https://www.bkstr.com/northdakotastore/home" style="text-decoration:none;" target="_blank"> <abbr title="University of North Dakota">UND</abbr> Bookstore</a></li>
+			<br/>
+			<li><a href="https://fergusonbooks.com/" style="text-decoration:none;" target="_blank">Ferguson Books</a></li>
+		</ul>
+		<br/><br/>
+		<div style="background-color:lightblue">
+		<p>
+			Review of the <dfn>Month</dfn>!
+		</p>
+		<blockquote cite="Review of the Month">
+			"I can't tell you how much this website has helped me find good books about Dota 2. </br>The design is 
+			flawless and the designer should get a raise.
+			</br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp-Trusted Customer"
+		</blockquote>
+		</div>
+		<br/><br/><br/><br/>
+	</body>
+	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+<!-- NOTES: use iframes -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+			table,td {
+			border: 3px solid black;
+			border-collapse: collapse;
+			align: center;
+			}
+	</style>
+	<title>David's Bookstore</title>
+	</head>
+	<header style="background-color:gray;" width="100%" >
+		<h1 align="center">Search Bookstore</h1>
+	</header>
+	<body background="9.jpg" >
+		<table align="left" width="100%">
+			<tr>
+				<th>
+					<h3>Search</h3>
+					<form action ="3.html">
+						<input type="image" src="1.png" name ="searchBtn" id="searchbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Help</h3>
+					<form action ="4.html">
+						<input type="image" src="2.png" name ="helpBtn" id="helpbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Home</h3>
+					 <form action ="2.html">
+						<input type="image" src="3.png" name ="homeBtn" id="homebutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Logout</h3>
+					 <form action ="1.html">
+						<input type="image" src="4.png" name ="logoutbtn" id="logoutbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+			</tr>
+		</table>
+		<!-- search box -->
+		<form action="" style="text-align:center;">
+			<label for="search"><br/>Search Text:</label>
+			<input type="text" name ="searchBox" list="searchStuff" maxlength="20">
+			<datalist id="searchStuff">
+			  <option value="Annabelle">
+			</datalist>
+			<input type="submit" value="Search" style="background-color: #2ecc71; font-size:16px; border-radius:12px; border: 2px dash white; box-shadow: 8px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19); "><br/><br/>
+		</form>
+		
+		
+		<table align="center" style="background-color:white; text-align:center; vertical-align:center;">
+			<caption><strong>Search Results</strong></caption>
+			<colgroup>
+				<col span="4">
+				<col style="background-color:#d4d6d8;">
+				<col style="background-color:#f2f218;">
+			</colgroup>
+			<tr>
+				<th width="200">
+					<h4><u>Book Image</u></h4>
+				</th>
+				<th width="200">
+					<h4><u>Title</u></h4>
+				</th>
+				<th width="200">
+					<h4><u>ISBN</u></h4>
+				</th>
+				<th width="200">
+					<h4><u>Price</u></h4>
+				</th>
+				<th>
+					<h4><u>Qty</u><h4>
+				</th>
+				<th width="75">
+					<h4><u>Order?</u></h4>
+				</th>
+			</tr>
+			<tr><!-- Book 1 -->
+				<td>
+					<image src="5.jpg" name="dota2b1" style="width:150px;height:200px;" alt="A Beginner's Guide to DOTA 2"/>
+				</td>
+				<td>
+					<h4><cite>A Beginner's Guide to DOTA 2</cite></h4>
+				</td>
+				<td>
+					<h4><code>1502732904</code></h4>
+				</td>
+				<td>
+					<h4><code>$5.00</code></h4>
+				</td>
+				<td>
+					<select name="Quantity">
+						<option value="0" selected="selected">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</td>
+				<td>
+					<input type="checkbox" name="order" value="yes" checked>Order</input>
+				</td>
+			</tr>
+			<tr><!-- Book 2 -->
+				<td>
+					<image src="6.jpg" name="dota2b2" style="width:200px;height:150px;" alt="DOTA 2: The Comic Collection"/>
+				</td>
+				<td>
+					<h4><cite>DOTA 2: The Comic Collection</cite></h4>
+				</td>
+				<td>
+					<h4><code>xxxxxxxxxx</code></h4>
+				</td>
+				<td>
+					<h4><code>$15.00</code></h4>
+				</td>
+				<td>
+					<select name="Quantity">
+						<option value="0" selected="selected">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</td>
+				<td>
+					<input type="checkbox" name="order" value="yes">Order</input>
+				</td>
+			</tr>
+			<tr><!-- Book 3 -->
+				<td>
+					<image src="7.jpg" name="dota2b3" style="width:150px;height:200px;" alt="Dota 2 Game Guide"/>
+				</td>
+				<td>
+					<h4><cite>Dota 2 Game Guide</cite></h4>
+				</td>
+				<td>
+					<h4><code>1633238164</code></h4>
+				</td>
+				<td>
+					<h4><code>$4.49</code></h4>
+				</td>
+				<td>
+					<select name="Quantity">
+						<option value="0" selected="selected">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</td>
+				<td>
+					<input type="checkbox" name="order" value="yes">Order</input>
+				</td>
+			</tr>
+			<tr><!-- Book 4 -->
+				<td>
+					<image src="8.jpg" name="dota2b4" style="width:150px;height:200px;" alt="Advance Guide to DOTA 2"/>
+				</td>
+				<td>
+					<h4><cite>Guia Definitivo Dota 2(ebook)</cite></h4>
+				</td>
+				<td>
+					<h4><code>n/a</code></h4>
+				</td>
+				<td>
+					<h4><code>$3.58</code></h4>
+				</td>
+				<td>
+					<select name="Quantity">
+						<option value="0" selected="selected">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</td>
+				<td>
+					<input type="checkbox" name="order" value="yes">Order</input>
+				</td>
+			</tr>
+		</table>
+		<br/>
+		<form action="5.html" style="text-align:center;" >
+			<input type="submit" value="Submit Order" style="background-color: #2ecc71; font-size:20px; border-radius:12px; border: 2px dash white; box-shadow: 8px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19); ">
+		</form>
+		<br/><br/><br/><br/>
+	</body>
+	
+	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+<!-- use <code> for the prices and info -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+			table,td {
+			border: 2px solid black;
+			}
+	</style>
+	<title>David's Bookstore</title>
+	</head>
+	<header style="background-color:gray;" width="100%" >
+		<h1 align="center">Need help using the Bookstore?</h1>
+	</header>
+	<body background="9.jpg" >
+		<table align="left" width="100%">
+			<tr>
+				<th>
+					<h3>Search</h3>
+					<form action ="3.html">
+						<input type="image" src="1.png" name ="searchBtn" id="searchbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Help</h3>
+					<form action ="4.html">
+						<input type="image" src="2.png" name ="helpBtn" id="helpbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Home</h3>
+					 <form action ="2.html">
+						<input type="image" src="3.png" name ="homeBtn" id="homebutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Logout</h3>
+					 <form action ="1.html">
+						<input type="image" src="4.png" name ="logoutbtn" id="logoutbutton" style="width:50px;height:50px;" 
+						action="1.html"/>
+					 </form>
+				</th>
+			</tr>
+		</table>
+		<p>
+			This is a fake bookstore. <del>All Books are available</del> <ins> Due to limitations, only books about Dota 2 will be available.</ins> :)
+			<br/>
+			<h5>more styling will be coming in Assignment 2</h5>
+			<h6>This website is supported by electricity</h6>
+		</p>
+		<a href="http://wenchen.cs.und.edu/course/260/2/1.html" title="homeworkDesc" target="show">
+		View Homework Assignment Description</a><br />
+		<iframe width="90%" height="400" name="show"></iframe>
+		<br/><br/>
+	</body>
+	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+			table,td {
+			border: 3px solid black;
+			border-collapse: collapse;
+			}
+	</style>
+	<title>David's Bookstore</title>
+	</head>
+	<header style="background-color:gray;" width="100%" >
+		<h1 align="center">Bookstore Cart</h1>
+	</header>
+	<body background="9.jpg" >
+		<table align="left" width="100%">
+			<tr>
+				<th>
+					<h3>Search</h3>
+					<form action ="3.html">
+						<input type="image" src="1.png" name ="searchBtn" id="searchbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Help</h3>
+					<form action ="4.html">
+						<input type="image" src="2.png" name ="helpBtn" id="helpbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Home</h3>
+					 <form action ="2.html">
+						<input type="image" src="3.png" name ="homeBtn" id="homebutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Logout</h3>
+					 <form action ="1.html">
+						<input type="image" src="4.png" name ="logoutbtn" id="logoutbutton" style="width:50px;height:50px;" 
+						action="1.html"/>
+					 </form>
+				</th>
+			</tr>
+		</table>
+		
+		<h1 align="center">Order Review</h1>
+		<table align="center" style="background-color:white; text-align:center; vertical-align:center;">
+			<tr>
+				<th width="220">
+					<h4><u>Title</u></h4>
+				</th>
+				<th width="200">
+					<h4><u>Price</u></h4>
+				</th>
+				<th>
+					<h4><u>Qty</u><h4>
+				</th>
+				<th width="75">
+					<h4><u>Total</u></h4>
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<p>A Beginner's Guide to DOTA 2</p>
+				</td>
+				<td>
+					<p><code>%5.00<code></p>
+				</td>
+				<td>
+					<p><code>2</code></p>
+				</td>
+				<td>
+					<p><code><b>$10.00</b></code></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>DOTA 2: The Comic Collection</p>
+				</td>
+				<td>
+					<p><code>%15.00<code></p>
+				</td>
+				<td>
+					<p><code>1</code></p>
+				</td>
+				<td>
+					<p><code><b>$15.00</b></code></p>
+				</td>
+			</tr>
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th>
+					<p><code>$25.00</code></p>
+				</th>
+			</tr>
+			
+		</table>
+		<br/>
+		<form action="6.html" style="text-align:center;" >
+			<input type="submit" value="Finalize Order" style="background-color: #2ecc71; font-size:20px; border-radius:12px; border: 2px dash white; box-shadow: 8px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19); ">
+		</form>
+		<br/><br/><br/><br/>
+		
+	</body>
+	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+<!-- cart icon 9.jpg/png -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+			table {
+			border: 2px solid black;
+			}
+			fieldset{
+			  width: 400px;
+			  margin:auto;
+			}
+	</style>
+	<title>David's Bookstore</title>
+	</head>
+	<header style="background-color:gray;" width="100%" >
+		<h1 align="center">Bookstore Checkout</h1>
+	</header>
+	<body background="9.jpg" >
+		<table align="left" width="100%">
+			<tr>
+				<th>
+					<h3>Search</h3>
+					<form action ="3.html">
+						<input type="image" src="1.png" name ="searchBtn" id="searchbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Help</h3>
+					<form action ="4.html">
+						<input type="image" src="2.png" name ="helpBtn" id="helpbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Home</h3>
+					 <form action ="2.html">
+						<input type="image" src="3.png" name ="homeBtn" id="homebutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Logout</h3>
+					 <form action ="1.html">
+						<input type="image" src="4.png" name ="logoutbtn" id="logoutbutton" style="width:50px;height:50px;" 
+						action="1.html"/>
+					 </form>
+				</th>
+			</tr>
+		</table>
+		
+		<p>Progress</p>
+		<meter align="center" value="5" min="0" max="10">2 out of ten</meter>
+		
+		<h3 align="center">Submit Payment</h3>
+		<fieldset style="display:inline-block; width:300px;" align="center">
+			<form style="border:none;" align="center" width="350px">
+				<legend align="center">Delivery Information</legend>
+				<table style="border:none;" align="center">
+					<tr>
+						<td>
+							Name: 
+						</td>
+						<td>
+							<input type="text" > <br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							CC Number: 
+						</td>
+						<td>
+							<input type="password"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							CC exp: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							CC pin: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Street Address: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							City: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							State: 
+						</td>
+						<td>
+							<input type="text"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Zip Code: 
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>
+				</table>
+			</form>
+			<hr color="black" width="300px"/>
+			<form action="7.html" style="text-align:center;" >
+				<input type="submit" value="Complete Order" style="background-color: #2ecc71; font-size:20px; border-radius:12px; border: 2px dash white; box-shadow: 8px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19); ">
+			</form>
+		</fieldset>
+	</body>
+	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+<!-- NOTES: use iframes -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+			table,td {
+			border: 2px solid black;
+			}
+	</style>
+	<title>David's Bookstore</title>
+	</head>
+	<header style="background-color:gray;" width="100%" >
+		<h1 align="center">Bookstore Order Complete!</h1>
+	</header>
+	<body background="9.jpg">
+		<table align="left" width="100%">
+			<tr>
+				<th>
+					<h3>Search</h3>
+					<form action ="3.html">
+						<input type="image" src="1.png" name ="searchBtn" id="searchbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Help</h3>
+					<form action ="4.html">
+						<input type="image" src="2.png" name ="helpBtn" id="helpbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Home</h3>
+					 <form action ="2.html">
+						<input type="image" src="3.png" name ="homeBtn" id="homebutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Logout</h3>
+					 <form action ="1.html">
+						<input type="image" src="4.png" name ="logoutbtn" id="logoutbutton" style="width:50px;height:50px;" 
+						action="1.html"/>
+					 </form>
+				</th>
+			</tr>
+		</table>
+		<p>Progress</p>
+		<meter align="center" value="10" min="0" max="10">10 out of ten</meter>
+		<article>
+			<h1 align="center"><br/><br/>Order complete!<br/>
+				Confirmation number #<code>1232345</code>
+			</h1>
+		</article>
+		<address>
+			Confirmation send to:<a href="student@ndus.edu">Jon Doe</a>
+		</address>
+		<form action="8.html" style="text-align:center;" >
+				<input type="submit" value="See Reviews" style="background-color: #2ecc71; font-size:20px; border-radius:12px; border: 2px dash white; box-shadow: 8px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19); ">
+		</form>
+		</br>
+		<form action="10.html" style="text-align:center;" >
+				<input type="submit" value="Download Book" style="background-color: #2ecc71; font-size:20px; border-radius:12px; border: 2px dash white; box-shadow: 8px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19); ">
+		</form>
+	</body>
+	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+			table,td {
+			border: 2px solid black;
+			}
+	</style>
+	<title>David's Bookstore</title>
+	</head>
+	<header style="background-color:gray;" width="100%" >
+		<h1 align="center">Welcome to David's Bookstore</h1>
+	</header>
+	<body background="9.jpg">
+		<table align="left" width="100%">
+			<tr>
+				<th>
+					<h3>Search</h3>
+					<form action ="3.html">
+						<input type="image" src="1.png" name ="searchBtn" id="searchbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Help</h3>
+					<form action ="4.html">
+						<input type="image" src="2.png" name ="helpBtn" id="helpbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Home</h3>
+					 <form action ="2.html">
+						<input type="image" src="3.png" name ="homeBtn" id="homebutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Logout</h3>
+					 <form action ="1.html">
+						<input type="image" src="4.png" name ="logoutbtn" id="logoutbutton" style="width:50px;height:50px;" 
+						action="1.html"/>
+					 </form>
+				</th>
+			</tr>
+		</table>
+		<p>A Beginners Guide to Dota 2 Top Review</p>
+		<blockquote><q>This is a must have book if you are just starting out. <big>Best</big> 
+					buy I ever made!</q><br/>
+					-Happy Customer</blockquote>
+					
+		<form action="9.html">
+			<input type="submit" value="A word from our sponsers" style="background-color: #2ecc71; font-size:20px; border-radius:12px; border: 2px dash white; box-shadow: 8px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19); ">
+		</form>
+	</body>
+	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+<!-- NOTES: use iframes -->
+
+<!-- confirm with address tag. insert blockquotes of reviews -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+			table,td {
+			border: 2px solid black;
+			}
+	</style>
+	<title>David's Bookstore</title>
+	</head>
+	<header style="background-color:gray;" width="100%" >
+		<h1 align="center">David's Bookstore Sponsers</h1>
+	</header>
+	<body background="9.jpg">
+		<table align="left" width="100%">
+			<tr>
+				<th>
+					<h3>Search</h3>
+					<form action ="3.html">
+						<input type="image" src="1.png" name ="searchBtn" id="searchbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Help</h3>
+					<form action ="4.html">
+						<input type="image" src="2.png" name ="helpBtn" id="helpbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Home</h3>
+					 <form action ="2.html">
+						<input type="image" src="3.png" name ="homeBtn" id="homebutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Logout</h3>
+					 <form action ="1.html">
+						<input type="image" src="4.png" name ="logoutbtn" id="logoutbutton" style="width:50px;height:50px;" 
+						action="1.html"/>
+					 </form>
+				</th>
+			</tr>
+		</table>
+		<h3>This bookstore <del>bought from you</del> <ins>brought to you</ins> from our <em>sponsers</em></h3>
+		<section>
+			<p>Do <mark>you</mark> wish that you could <samp>talk with a real robot</samp></br>
+				or even <kbd>act like a <var>ROBOT</var></kbd>?</br>
+				Then you can start building your own with w3schools!</p>
+		</section>
+		<section>
+			<iframe src="https://www.w3schools.com">
+				<p>Your browser does not support iframes.</p>
+			</iframe>
+		</section>
+		
+		<button>how to keep someone busy</button>
+		<details>
+			<summary>This bookstore is not associated with w3schools <s>irl</s> in real life.</summary>
+			<p><b>Note:</b><small>all rights reserved by w3schools</small></p>
+		</details>
+	</body>
+	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+<!-- NOTES: use iframes -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+			table,td {
+			border: 2px solid black;
+			}
+	</style>
+	<title>David's Bookstore</title>
+	</head>
+	<header style="background-color:gray;" width="100%" >
+		<h1 align="center">David's Bookstore Sponsers</h1>
+	</header>
+	<body background="9.jpg">
+		<table align="left" width="100%">
+			<tr>
+				<th>
+					<h3>Search</h3>
+					<form action ="3.html">
+						<input type="image" src="1.png" name ="searchBtn" id="searchbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Help</h3>
+					<form action ="4.html">
+						<input type="image" src="2.png" name ="helpBtn" id="helpbutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Home</h3>
+					 <form action ="2.html">
+						<input type="image" src="3.png" name ="homeBtn" id="homebutton" style="width:50px;height:50px;" />
+					 </form>
+				</th>
+				<th>
+					<h3>Logout</h3>
+					 <form action ="1.html">
+						<input type="image" src="4.png" name ="logoutbtn" id="logoutbutton" style="width:50px;height:50px;" 
+						action="1.html"/>
+					 </form>
+				</th>
+			</tr>
+		</table>
+		<center>Download Progress: <progress value="33" max="100"></progress></br></br></center>
+		
+		<audio id="audio_play">
+			<source src="http://soundbible.com/grab.php?id=1964&type=mp3" type="audio/ogg" />
+		</audio>
+		<img src="10.gif" alt="Thank You" height="200" width="275" onCLick="document.getElementById('audio_play').play(); return false;">
+		</br>
+		</br>
+		-Supported by this red square:</br>
+		<canvas id="myCanvas"></canvas>
+
+		<script>
+			var canvas = document.getElementById("myCanvas");
+			var ctx = canvas.getContext("2d");
+			ctx.fillStyle = "#FF0000";
+			ctx.fillRect(0, 0, 80, 80);
+		</script>
+		
+		<input list="PeopleWhoHelped">
+
+		<datalist id="PeopleWhoHelped">
+		  <option value="Annabelle">
+		  <option value="Stella">
+		  <option value="Brandy">
+		</datalist>
+	</body>
+
+	<footer style="position:fixed; left:0; bottom:0; width:100%; background-color:gray; color:black; text-align:center;"> 
+	 David Erickson &copy 2018
+	</footer>
+</html>
+
+<!-- NOTES: use iframes -->
