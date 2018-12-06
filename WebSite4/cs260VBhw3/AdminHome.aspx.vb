@@ -17,6 +17,7 @@ Partial Class Home
     End Sub
     Protected Sub btn_book_Click(sender As Object, e As EventArgs) Handles btn_book.Click
         conn = control.GetConnection()
+        conn.Open()
         Dim Sql As String = "DELETE FROM Books"
         Dim cmd As New OleDb.OleDbCommand(Sql, conn)
         cmd.ExecuteNonQuery()
@@ -25,6 +26,7 @@ Partial Class Home
     End Sub
     Protected Sub btn_cust_Click(sender As Object, e As EventArgs) Handles btn_cust.Click
         conn = control.GetConnection()
+        conn.Open()
         Dim Sql As String = "DELETE FROM Customers"
         Dim cmd As New OleDb.OleDbCommand(Sql, conn)
         cmd.ExecuteNonQuery()
@@ -33,6 +35,7 @@ Partial Class Home
     End Sub
     Protected Sub btn_order_Click(sender As Object, e As EventArgs) Handles btn_order.Click
         conn = control.GetConnection()
+        conn.Open()
         Dim Sql As String = "DELETE FROM Orders"
         Dim cmd As New OleDb.OleDbCommand(Sql, conn)
         cmd.ExecuteNonQuery()
@@ -41,6 +44,7 @@ Partial Class Home
     End Sub
     Protected Sub btn_writtenby_Click(sender As Object, e As EventArgs) Handles btn_writtenby.Click
         conn = control.GetConnection()
+        conn.Open()
         Dim Sql As String = "DELETE FROM Writtenby"
         Dim cmd As New OleDb.OleDbCommand(Sql, conn)
         cmd.ExecuteNonQuery()
